@@ -22,10 +22,9 @@ html {
 
 body {
   margin: 0;
-
   background: #f5f1ef;
-
   color: #292629;
+  overflow-x: hidden;
 }
 
 button,
@@ -35,15 +34,12 @@ a {
 
 button {
   border: none;
-
   background: none;
-
   cursor: pointer;
 }
 
 a {
   color: inherit;
-
   text-decoration: none;
 }
 
@@ -59,9 +55,7 @@ a {
   padding: 0 6vw;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   position: fixed;
@@ -78,9 +72,7 @@ a {
 
 .logo {
   font-size: 26px;
-
   font-weight: 700;
-
   letter-spacing: -2px;
 }
 
@@ -90,15 +82,12 @@ a {
 
 .navbar nav {
   display: flex;
-
   gap: 30px;
 }
 
 .navbar nav button {
   color: #292629;
-
   font-size: 13px;
-
   transition: 0.3s;
 }
 
@@ -120,7 +109,6 @@ a {
 
 .nav-contact:hover {
   background: #292629;
-
   color: #f5f1ef;
 }
 
@@ -389,12 +377,9 @@ a {
    PROJETOS
 ======================================== */
 
-/* ========================================
-   PROJETOS
-======================================== */
-
 .projects {
   background: #292629;
+
   color: #f5f1ef;
 }
 
@@ -404,15 +389,21 @@ a {
 
 .projects-heading {
   display: flex;
+
   align-items: end;
+
   justify-content: space-between;
+
   gap: 40px;
+
   margin-bottom: 90px;
 }
 
 .projects-heading p {
   max-width: 350px;
+
   color: #aaa;
+
   line-height: 1.7;
 }
 
@@ -422,53 +413,108 @@ a {
 
 .projects-list {
   display: flex;
+
   flex-direction: column;
+
   gap: 120px;
 }
 
 .project-card {
+  width: 100%;
+
   cursor: pointer;
 }
 
+
+/* ========================================
+   VÍDEO DOS PROJETOS
+======================================== */
+
+/*
+   O CONTAINER AGORA OCUPA TODA A LARGURA.
+   Não usamos aspect-ratio fixo aqui.
+   Assim o vídeo determina sua própria altura.
+*/
+
 .project-image {
+  width: 100%;
+
   height: 650px;
+
   overflow: hidden;
+
   position: relative;
-  background: #3b383a; /* A cor cinza de fundo que serve de placeholder */
+
+  background: #3b383a;
+
+  border-radius: 4px;
 }
 
-/* Garante que o vídeo ocupe exatamente 100% da área cinza */
+
+/*
+   O vídeo ocupa 100% da largura.
+
+   height: auto faz com que a proporção
+   original do vídeo seja preservada.
+*/
+
 .project-video {
   width: 100%;
+
   height: 100%;
-  object-fit: cover; /* Cobre todo o espaço do container mantendo a proporção */
+
   display: block;
+
+  object-fit: cover;
+
+  background: #3b383a;
+
   transition: transform 0.8s ease;
 }
 
 .project-card:hover .project-video {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
+
+
+/* ========================================
+   OVERLAY DO PROJETO
+======================================== */
 
 .project-overlay {
   position: absolute;
+
   inset: 0;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   opacity: 0;
+
   background: rgba(184, 120, 137, 0.8);
+
   transition: 0.4s;
-  pointer-events: none; /* Garante que o mouse interaja corretamente com o card/vídeo */
+
+  pointer-events: none;
 }
 
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 
+
+/* ========================================
+   INFORMAÇÕES DOS PROJETOS
+======================================== */
+
 .project-info {
   display: grid;
+
   grid-template-columns: 80px 1fr;
+
   padding-top: 25px;
 }
 
@@ -478,71 +524,24 @@ a {
 
 .project-info h3 {
   font-size: 35px;
+
   font-weight: 500;
+
   margin-bottom: 7px;
 }
 
 .project-info p {
   color: #c995a3;
+
   font-size: 13px;
+
   margin-bottom: 15px;
 }
 
 .project-info small {
   color: #999;
+
   font-size: 14px;
-}
-/* ========================================
-   PROJETOS - CORREÇÃO
-======================================== */
-
-.project-image {
-  /* REMOVA A ALTURA FIXA */
-  /* height: 650px; */
-
-  overflow: hidden;
-  position: relative;
-  background: #3b383a00;
-
-  /* ADICIONE A PROPORÇÃO AQUI */
-  /* Escolha uma das opções abaixo, dependendo do formato do SEU vídeo */
-
-  /* OPÇÃO A: Se o seu vídeo for QUADRADO (como na prévia da imagem): */
-  aspect-ratio: 11 / 11;
-
-  /* OPÇÃO B: Se o seu vídeo for VERTICAL (padrão Reels/TikTok 9:16): */
-  /* aspect-ratio: 9 / 16; */
-
-  /* OPÇÃO C: Se o seu vídeo for HORIZONTAL (padrão YouTube 16:9): */
-  /* aspect-ratio: 16 / 9; */
-}
-
-/* Esta regra já deve estar lá, mas é essencial para o aspect-ratio funcionar */
-.project-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Garante que o vídeo preencha a área sem distorcer */
-  display: block;
-  transition: transform 0.8s ease;
-}
-
-/* ========================================
-   AJUSTES PARA RESPONSIVIDADE (TABLET/MOBILE)
-   Se você usou aspect-ratio acima, não precisa redefinir height nos medias queries,
-   o aspect-ratio se ajusta automaticamente à largura da tela.
-   Portanto, nos seus @media, certifique-se de não sobrescrever com height fixo.
-======================================== */
-
-@media (max-width: 900px) {
-  .project-image {
-    /* Verifique se há um height: xxx; aqui e remova se houver */
-  }
-}
-
-@media (max-width: 600px) {
-  .project-image {
-    /* Verifique se há um height: xxx; aqui e remova se houver */
-  }
 }
 
 
@@ -730,7 +729,10 @@ a {
 .skill {
   display: grid;
 
-  grid-template-columns: 60px 1fr;
+  /* Número e nome bem mais próximos */
+  grid-template-columns: 30px 1fr;
+
+  gap: 5px;
 
   align-items: center;
 
@@ -759,6 +761,34 @@ a {
   color: #b87889;
 }
 
+
+/* ========================================
+   IMAGEM DA EQUIPE
+======================================== */
+
+.skills-image {
+  width: 1000px !important;
+  height: auto !important;
+  margin: 5px 0 0 0 !important;
+  padding: 0 !important;
+  flex: none !important;
+  overflow: hidden !important;
+  background-color: transparent;
+}
+
+.skills-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  transform: scale(0.4) !important;
+  transform-origin: top left !important;
+
+  /* Foto um pouco mais baixa */
+  margin: -20px 0 -150px 0 !important;
+
+  object-fit: contain !important;
+}
 
 /* ========================================
    CONTATO
@@ -884,8 +914,18 @@ footer {
     align-items: flex-start;
   }
 
+  /*
+     No tablet, continua ocupando
+     toda a largura disponível.
+  */
+
   .project-image {
-    height: 450px;
+    width: 100%;
+  }
+
+  .project-video {
+    width: 100%;
+    height: auto;
   }
 
   .videos-grid {
@@ -962,8 +1002,25 @@ footer {
     gap: 25px;
   }
 
+
+  /* ====================================
+     PROJETOS NO CELULAR
+  ==================================== */
+
   .project-image {
-    height: 300px;
+    width: 100%;
+
+    height: auto;
+
+    overflow: hidden;
+  }
+
+  .project-video {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
   }
 
   .project-info {
@@ -973,6 +1030,11 @@ footer {
   .project-info h3 {
     font-size: 27px;
   }
+
+
+  /* ====================================
+     VÍDEOS NO CELULAR
+  ==================================== */
 
   .video-wrapper {
     aspect-ratio: 9 / 16;

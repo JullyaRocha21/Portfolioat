@@ -6,7 +6,7 @@ const projects = [
     number: "01",
     title: "Implasverde",
     category: "Social Media • Branding",
-    video: "./videos/implasverde.mp4",
+    video: "./videos/implasverde.mp4?v=2",
     description:
       "Criação de conteúdo, campanhas e comunicação visual para a marca.",
   },
@@ -14,7 +14,7 @@ const projects = [
     number: "02",
     title: "Pousada Serra do Torreão",
     category: "Social Media • Turismo",
-    video: "./videos/pousada.mp4",
+    video: "./videos/pousada.mp4?v=2",
     description:
       "Estratégia de conteúdo para fortalecer a presença digital da pousada.",
   },
@@ -22,7 +22,7 @@ const projects = [
     number: "03",
     title: "Ferrovia Restaurante",
     category: "Social Media • Gastronomia",
-    video: "./videos/ferrovia.mp4",
+    video: "./videos/ferrovia.mp4?v=2",
     description:
       "Conteúdo visual e campanhas para comunicação gastronômica.",
   },
@@ -30,7 +30,7 @@ const projects = [
     number: "04",
     title: "Restaurante Estação",
     category: "Social Media • Gastronomia",
-    video: "./videos/estacao.mp4",
+    video: "./videos/estacao.mp4?v=2",
     description:
       "Conteúdo visual e campanhas para comunicação gastronômica.",
   },
