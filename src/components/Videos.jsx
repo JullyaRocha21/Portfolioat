@@ -6,18 +6,18 @@ const videos = [
   {
     id: 1,
     title: "Ideal Terapias",
-    category: "Reels • Animado",
+    category: "Vídeo • Institucional",
     description:
-      "Conteúdo produzido para informar sobre Prompt na Fonoaudiologia.",
+      "Conteúdo produzido como vídeo Institucional de uma Clínica Terapêutica.",
     video: "/Portfolioat/videos/prompt.mp4",
   },
 
   {
     id: 2,
     title: "Pousada Serra do Torreão",
-    category: "Reels • Turismo",
+    category: "Reels • Motion Design",
     description:
-      "Vídeo desenvolvido para apresentar a experiência da pousada com o café da manhã.",
+      "Motion design produzido para divulgar a pousada e seus serviços.",
     video: "/Portfolioat/videos/cafe-da-manha.mp4",
   },
 

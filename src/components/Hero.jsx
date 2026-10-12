@@ -94,7 +94,7 @@ export default function Hero() {
           </button>
 
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/jrdesign__/"
             target="_blank"
             rel="noreferrer"
             className="secondary-button"
