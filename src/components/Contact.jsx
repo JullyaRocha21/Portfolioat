@@ -61,7 +61,7 @@ export default function Contact() {
 
           {/* Instagram */}
           <a
-            href="https://www.instagram.com/jrdesign__/"
+            href="https://www.instagram.com/jrfilmagensecriacao/"
             target="_blank"
             rel="noreferrer"
           >
