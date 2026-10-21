@@ -9,7 +9,7 @@ const videos = [
     category: "Vídeo • Institucional",
     description:
       "Conteúdo produzido como vídeo Institucional de uma Clínica Terapêutica.",
-    video: "/Portfolioat/videos/prompt.mp4",
+    video: "/Portfolio/videos/institucional-ideal.mp4",
   },
 
   {
@@ -18,7 +18,7 @@ const videos = [
     category: "Reels • Motion Design",
     description:
       "Motion design produzido para divulgar a pousada e seus serviços.",
-    video: "/Portfolioat/videos/cafe-da-manha.mp4",
+    video: "/Portfolio/videos/motion-pousada.mp4",
   },
 
   {
@@ -27,7 +27,7 @@ const videos = [
     category: "Reels • Animado",
     description:
       "Conteúdo produzido para informar sobre avaliação psicológica.",
-    video: "/Portfolioat/videos/avaliacao-psicologica.mp4",
+    video: "/Portfolio/videos/avaliacao-psicologica.mp4",
   },
 
   {
@@ -36,7 +36,7 @@ const videos = [
     category: "Reels • After",
     description:
       "Produção desenvolvida do after da OAB Mato Grande no Restaurante.",
-    video: "/Portfolioat/videos/jantar-oab-ferrovia.mp4",
+    video: "/Portfolio/videos/jantar-oab-ferrovia.mp4",
   },
 ];
 
