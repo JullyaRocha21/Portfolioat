@@ -51,7 +51,7 @@ export default function Navbar() {
       {/* Container para agrupar os botões sociais lado a lado */}
       <div className="nav-socials" style={{ display: "flex", gap: "10px" }}>
         <a
-          href="https://www.instagram.com/jrdesign__/"
+          href="https://www.instagram.com/jrfilmagensecriacao/"
           target="_blank"
           rel="noreferrer"
           className="nav-contact"
